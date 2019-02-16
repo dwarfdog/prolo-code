@@ -1,6 +1,6 @@
 # Objectives 
   -multimedia library project
-    *general purpose storage online
+    *online general purpose storage
 
 # Constraints
   -we code everything from scratch 
