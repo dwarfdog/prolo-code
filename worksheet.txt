@@ -1,5 +1,24 @@
 # Objectives 
   -multimedia library project
     *general purpose storage online
+
+# Constraints
+  -we code everything from scratch 
+  -we start from a classic wamp/lamp environment
+  
+# Tasks
+
+  -Jeremy
+    *create project architecture
+      ~folders tree
+        .create templates folder
+        .snake_case and clear naming
+      ~index.php
+      
+  -Marco
+    *data structure conception
     
+  -Yacine
+    *install Twig once folders tree created
     
+
