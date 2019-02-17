@@ -18,9 +18,11 @@
       ~create a dedicated branch
       
   -Marco
-    *data structure conception
+    *?
     
   -Yacine
+    *database creation query
+    *merge Marco's work into develop
     *install Twig once folders tree created
       ~without Composer
         .use of create autoloader
