@@ -15,6 +15,7 @@
         .snake_case and clear naming
       ~index.php
     *commit and push my work on this repo.
+      ~create a dedicated branch
       
   -Marco
     *data structure conception
