@@ -9,6 +9,17 @@ global $Develop;
 if (!isset($Develop)) {
     $Develop = new stdClass;
 }
+
+require_once dirname(dirname(__FILE__)) . "/system/twig/twigAutoload.php";
+
+$Develop->loader = new \Twig\Loader\FilesystemLoader('templates');
+$Develop->twig = new \Twig\Environment($Develop->loader, [
+    'cache' => 'cache',
+    'debug' => true,
+]);
+
+
+
 include_once(dirname(dirname(__FILE__)) . '/libraries/develop.lib.route.php');
 
 
@@ -27,6 +38,8 @@ include_once(develop_route()->configs . 'classes.php');
 include_once(develop_route()->configs . 'develop.config.site.php');
 include_once(develop_route()->configs . 'develop.config.db.php');
 
+
+
 //Load session start after classes #1318
 session_start();
 foreach ($Develop->libraries as $lib) {
@@ -34,5 +47,6 @@ foreach ($Develop->libraries as $lib) {
         throw new exception('Cannot include all libraries');
     }
 }
-develop_trigger_callback('develop', 'init');
+
+
 

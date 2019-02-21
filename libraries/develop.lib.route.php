@@ -64,7 +64,8 @@ function develop_route() {
 				'cache' => "{$root}/cache/",
 				'js' => "$root/javascripts/",
 				'system' => "$root/system/",
-				'components' => "$root/components"
+				'components' => "$root/components",
+				'templates' => "$root/templates"
 		);
 		return arrayObject($defaults);
 }
@@ -118,12 +119,16 @@ function develop_register_class(array $classes = array()) {
  * 
  * @return void
  */
-function develop_autoload_classes($name = '') {
-		global $Develop;
-		if(isset($Develop->classes[$name]) && file_exists($Develop->classes[$name])) {
-				require_once($Develop->classes[$name]);
-		}
+
+function develop_autoload_classes($class = ''){
+	global $Develop;
+	if(isset($Develop->classes[$class]) && file_exists($Develop->classes[$class])) {
+			require_once($Develop->classes[$class]);
+			return;
+	}
 }
+
+
 /**
  * Unregister a class 
  * Unregistering the system classes may result in strange behaviour 
