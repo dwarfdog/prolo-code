@@ -10,16 +10,6 @@ if (!isset($Develop)) {
     $Develop = new stdClass;
 }
 
-require_once dirname(dirname(__FILE__)) . "/system/twig/TwigAutoloader.php";
-
-$Develop->loader = new \Twig\Loader\FilesystemLoader('templates');
-$Develop->twig = new \Twig\Environment($Develop->loader, [
-    'cache' => 'cache',
-    'debug' => true,
-]);
-
-
-
 include_once(dirname(dirname(__FILE__)) . '/libraries/develop.lib.route.php');
 
 
@@ -47,6 +37,13 @@ foreach ($Develop->libraries as $lib) {
         throw new exception('Cannot include all libraries');
     }
 }
+
+$Develop->loader = new DevelopTwigAutoloader;
+$Develop->loader = new \Twig\Loader\FilesystemLoader('templates');
+$Develop->twig = new \Twig\Environment($Develop->loader, [
+    'cache' => 'cache',
+    'debug' => true,
+]);
 
 
 
