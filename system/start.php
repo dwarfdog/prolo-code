@@ -10,7 +10,7 @@ if (!isset($Develop)) {
     $Develop = new stdClass;
 }
 
-require_once dirname(dirname(__FILE__)) . "/system/twig/twigAutoload.php";
+require_once dirname(dirname(__FILE__)) . "/system/twig/TwigAutoloader.php";
 
 $Develop->loader = new \Twig\Loader\FilesystemLoader('templates');
 $Develop->twig = new \Twig\Environment($Develop->loader, [
