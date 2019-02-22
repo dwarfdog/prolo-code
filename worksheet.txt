@@ -21,6 +21,9 @@
     *?
     
   -Yacine
+  
+    DIFFICILE DE SE CONNECTER EN ASIE (Google et Whatsapp sont bloqués et les connexions sont merdiques, mais GitHub est universel ;) je regarde le Twig et j'ai download la doc !)
+    
     *database creation query
     *merge Marco's work into develop
     *install Twig once folders tree created
